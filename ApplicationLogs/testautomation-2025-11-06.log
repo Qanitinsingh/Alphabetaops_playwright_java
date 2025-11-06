@@ -1,0 +1,25 @@
+2025-11-06 16:02:00 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/nitinkumar/Library/Caches/JetBrains/IdeaIC2025.2/temp-testng-customsuite.xml
+
+2025-11-06 16:02:00 [main] INFO  page.steps.Hooks - Launching Playwright browser: chromium
+2025-11-06 16:02:02 [main] INFO  page.steps.Hooks - chromium browser launched, maximized, and cookies cleared.
+2025-11-06 16:02:02 [main] INFO  page.methods.TextBoxActions - Launching chromium browser from Hooks...
+2025-11-06 16:02:16 [main] INFO  page.methods.TextBoxActions - Navigating to URL: https://alphabetaops.com/
+2025-11-06 16:02:16 [main] INFO  page.methods.TextBoxActions - Clicking 'Novice' menu option...
+2025-11-06 16:02:40 [main] INFO  page.methods.TextBoxActions - Clicking 'Text Box' link...
+2025-11-06 16:02:43 [main] INFO  page.methods.TextBoxActions - Clicking Basic Text Box section...
+2025-11-06 16:03:13 [main] ERROR page.methods.TextBoxActions - Failed to enter text in placeholder field: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3653732906721293737/package/lib/server/progress.js:68:28)
+    at FrameDispatcher._runCommand (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3653732906721293737/package/lib/server/dispatchers/dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3653732906721293737/package/lib/server/dispatchers/dispatcher.js:329:39)
+}
+Call log:
+-   - waiting for locator("#plain-text")
+
+2025-11-06 16:03:13 [main] ERROR page.steps.Hooks - Scenario 'Fill the form and submit' failed. Screenshot saved at: /Users/nitinkumar/IdeaProjects/playwright-alphabetaops/ScreenShots/Fill_the_form_and_submit_20251106_160313.png
+2025-11-06 16:03:13 [main] INFO  page.steps.Hooks - Browser context closed.
+2025-11-06 16:03:13 [main] INFO  page.steps.Hooks - Browser instance closed.
+2025-11-06 16:03:13 [main] INFO  page.steps.Hooks - Playwright closed.

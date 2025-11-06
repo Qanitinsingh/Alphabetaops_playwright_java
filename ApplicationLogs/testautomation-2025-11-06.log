@@ -23,3 +23,203 @@ Call log:
 2025-11-06 16:03:13 [main] INFO  page.steps.Hooks - Browser context closed.
 2025-11-06 16:03:13 [main] INFO  page.steps.Hooks - Browser instance closed.
 2025-11-06 16:03:13 [main] INFO  page.steps.Hooks - Playwright closed.
+2025-11-06 17:22:54 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/nitinkumar/Library/Caches/JetBrains/IdeaIC2025.2/temp-testng-customsuite.xml
+
+2025-11-06 17:22:54 [main] INFO  page.steps.Hooks - Launching Chromium browser...
+2025-11-06 17:23:24 [main] INFO  page.steps.Hooks - Chromium launched & maximized.
+2025-11-06 17:23:24 [main] INFO  page.methods.TextBoxActions - Launching chromium browser from Hooks...
+2025-11-06 17:23:24 [main] ERROR page.methods.TextBoxActions - Failed to navigate to https://alphabetaops.com/ : Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-908812706348256028/package/lib/server/dispatchers/dispatcher.js:260:69)
+    at transport.onmessage (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-908812706348256028/package/lib/cli/driver.js:53:59)
+    at Immediate._onImmediate (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-908812706348256028/package/lib/server/utils/pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
+}
+2025-11-06 17:23:24 [main] ERROR page.steps.Hooks - Error capturing screenshot: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-908812706348256028/package/lib/server/dispatchers/dispatcher.js:260:69)
+    at transport.onmessage (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-908812706348256028/package/lib/cli/driver.js:53:59)
+    at Immediate._onImmediate (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-908812706348256028/package/lib/server/utils/pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
+}
+2025-11-06 17:25:17 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/nitinkumar/Library/Caches/JetBrains/IdeaIC2025.2/temp-testng-customsuite.xml
+
+2025-11-06 17:25:17 [main] INFO  page.steps.Hooks - Launching Chromium browser...
+2025-11-06 17:25:30 [main] INFO  page.steps.Hooks - Chromium launched & maximized.
+2025-11-06 17:25:40 [main] INFO  page.methods.TextBoxActions - Launching chromium browser from Hooks...
+2025-11-06 17:25:42 [main] INFO  page.methods.TextBoxActions - Navigating to URL: https://alphabetaops.com/
+2025-11-06 17:25:42 [main] INFO  page.methods.TextBoxActions - Clicking 'Novice' menu option...
+2025-11-06 17:26:05 [main] INFO  page.methods.TextBoxActions - Clicking 'Text Box' link...
+2025-11-06 17:26:06 [main] INFO  page.methods.TextBoxActions - Clicking Basic Text Box section...
+2025-11-06 17:26:17 [main] INFO  page.methods.TextBoxActions - Switched to practice form Iframe.
+2025-11-06 17:27:13 [main] ERROR page.methods.TextBoxActions - Failed to enter text in placeholder field: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-17024972656124085375/package/lib/server/progress.js:68:28)
+    at FrameDispatcher._runCommand (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-17024972656124085375/package/lib/server/dispatchers/dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-17024972656124085375/package/lib/server/dispatchers/dispatcher.js:329:39)
+}
+Call log:
+-   - waiting for locator("#plain-text")
+
+2025-11-06 17:27:13 [main] ERROR page.steps.Hooks - Error capturing screenshot: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-17024972656124085375/package/lib/server/dispatchers/dispatcher.js:340:15)
+}
+Call log:
+-   - taking page screenshot
+-   - waiting for fonts to load...
+-   - fonts loaded
+
+2025-11-06 17:27:14 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/nitinkumar/Library/Caches/JetBrains/IdeaIC2025.2/temp-testng-customsuite.xml
+
+2025-11-06 17:27:15 [main] INFO  page.steps.Hooks - Launching Chromium browser...
+2025-11-06 17:27:16 [main] INFO  page.steps.Hooks - Chromium launched & maximized.
+2025-11-06 17:27:16 [main] INFO  page.methods.TextBoxActions - Launching chromium browser from Hooks...
+2025-11-06 17:27:17 [main] INFO  page.methods.TextBoxActions - Navigating to URL: https://alphabetaops.com/
+2025-11-06 17:27:17 [main] INFO  page.methods.TextBoxActions - Clicking 'Novice' menu option...
+2025-11-06 17:27:19 [main] INFO  page.methods.TextBoxActions - Clicking 'Text Box' link...
+2025-11-06 17:27:21 [main] INFO  page.methods.TextBoxActions - Clicking Basic Text Box section...
+2025-11-06 17:27:21 [main] INFO  page.methods.TextBoxActions - Switched to practice form Iframe.
+2025-11-06 17:27:29 [main] ERROR page.methods.TextBoxActions - Failed to enter text in placeholder field: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at PageDispatcher._dispose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3041334719532640217/package/lib/server/dispatchers/dispatcher.js:109:30)
+    at Page.<anonymous> (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3041334719532640217/package/lib/server/dispatchers/pageDispatcher.js:71:12)
+    at Page.emit (node:events:518:28)
+    at Page._didClose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3041334719532640217/package/lib/server/page.js:172:10)
+    at CRPage.didClose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3041334719532640217/package/lib/server/chromium/crPage.js:135:16)
+    at CRBrowser._onDetachedFromTarget (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3041334719532640217/package/lib/server/chromium/crBrowser.js:183:14)
+    at CRSession.emit (node:events:518:28)
+    at /private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3041334719532640217/package/lib/server/chromium/crConnection.js:138:14
+}
+Call log:
+-   - waiting for locator("#plain-text")
+
+2025-11-06 17:27:29 [main] ERROR page.steps.Hooks - Error capturing screenshot: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3041334719532640217/package/lib/server/dispatchers/dispatcher.js:260:69)
+    at transport.onmessage (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3041334719532640217/package/lib/cli/driver.js:53:59)
+    at Immediate._onImmediate (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-3041334719532640217/package/lib/server/utils/pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
+}
+2025-11-06 17:35:01 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/nitinkumar/Library/Caches/JetBrains/IdeaIC2025.2/temp-testng-customsuite.xml
+
+2025-11-06 17:35:02 [main] INFO  page.steps.Hooks - Launching Chromium browser...
+2025-11-06 17:35:03 [main] INFO  page.steps.Hooks - Chromium launched & maximized.
+2025-11-06 17:35:03 [main] INFO  page.methods.TextBoxActions - Launching chromium browser from Hooks...
+2025-11-06 17:35:05 [main] INFO  page.methods.TextBoxActions - Navigating to URL: https://alphabetaops.com/
+2025-11-06 17:35:05 [main] INFO  page.methods.TextBoxActions - Clicking 'Novice' menu option...
+2025-11-06 17:35:06 [main] INFO  page.methods.TextBoxActions - Clicking 'Text Box' link...
+2025-11-06 17:35:06 [main] INFO  page.methods.TextBoxActions - Clicking Basic Text Box section...
+2025-11-06 17:35:06 [main] INFO  page.methods.TextBoxActions - Switched to practice form Iframe.
+2025-11-06 17:35:18 [main] ERROR page.methods.TextBoxActions - Failed to enter text in placeholder field: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at PageDispatcher._dispose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-16637602772797192687/package/lib/server/dispatchers/dispatcher.js:109:30)
+    at Page.<anonymous> (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-16637602772797192687/package/lib/server/dispatchers/pageDispatcher.js:71:12)
+    at Page.emit (node:events:518:28)
+    at Page._didClose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-16637602772797192687/package/lib/server/page.js:172:10)
+    at CRPage.didClose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-16637602772797192687/package/lib/server/chromium/crPage.js:135:16)
+    at CRBrowser._onDetachedFromTarget (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-16637602772797192687/package/lib/server/chromium/crBrowser.js:183:14)
+    at CRSession.emit (node:events:518:28)
+    at /private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-16637602772797192687/package/lib/server/chromium/crConnection.js:138:14
+}
+Call log:
+-   - waiting for locator("#plain-text")
+
+2025-11-06 17:35:18 [main] ERROR page.steps.Hooks - Error capturing screenshot: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-16637602772797192687/package/lib/server/dispatchers/dispatcher.js:260:69)
+    at transport.onmessage (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-16637602772797192687/package/lib/cli/driver.js:53:59)
+    at Immediate._onImmediate (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-16637602772797192687/package/lib/server/utils/pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
+}
+2025-11-06 17:35:26 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/nitinkumar/Library/Caches/JetBrains/IdeaIC2025.2/temp-testng-customsuite.xml
+
+2025-11-06 17:35:26 [main] INFO  page.steps.Hooks - Launching Chromium browser...
+2025-11-06 17:35:30 [main] INFO  page.steps.Hooks - Chromium launched & maximized.
+2025-11-06 17:35:32 [main] INFO  page.methods.TextBoxActions - Launching chromium browser from Hooks...
+2025-11-06 17:35:33 [main] INFO  page.methods.TextBoxActions - Navigating to URL: https://alphabetaops.com/
+2025-11-06 17:35:33 [main] INFO  page.methods.TextBoxActions - Clicking 'Novice' menu option...
+2025-11-06 17:35:34 [main] INFO  page.methods.TextBoxActions - Clicking 'Text Box' link...
+2025-11-06 17:35:34 [main] INFO  page.methods.TextBoxActions - Clicking Basic Text Box section...
+2025-11-06 17:35:46 [main] INFO  page.methods.TextBoxActions - Switched to practice form Iframe.
+2025-11-06 17:36:38 [main] ERROR page.methods.TextBoxActions - Failed to enter text in placeholder field: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-7626533503365030405/package/lib/server/progress.js:68:28)
+    at FrameDispatcher._runCommand (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-7626533503365030405/package/lib/server/dispatchers/dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-7626533503365030405/package/lib/server/dispatchers/dispatcher.js:329:39)
+}
+Call log:
+-   - waiting for locator("#plain-text")
+
+2025-11-06 17:36:38 [main] ERROR page.steps.Hooks - Error capturing screenshot: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-7626533503365030405/package/lib/server/dispatchers/dispatcher.js:340:15)
+}
+Call log:
+-   - taking page screenshot
+-   - waiting for fonts to load...
+-   - fonts loaded
+
+2025-11-06 17:40:39 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  /Users/nitinkumar/Library/Caches/JetBrains/IdeaIC2025.2/temp-testng-customsuite.xml
+
+2025-11-06 17:40:39 [main] INFO  page.steps.Hooks - Launching Chromium browser...
+2025-11-06 17:40:41 [main] INFO  page.steps.Hooks - Chromium launched & maximized.
+2025-11-06 17:40:41 [main] INFO  page.methods.TextBoxActions - Launching chromium browser from Hooks...
+2025-11-06 17:40:42 [main] INFO  page.methods.TextBoxActions - Navigating to URL: https://alphabetaops.com/
+2025-11-06 17:40:42 [main] INFO  page.methods.TextBoxActions - Clicking 'Novice' menu option...
+2025-11-06 17:40:43 [main] INFO  page.methods.TextBoxActions - Clicking 'Text Box' link...
+2025-11-06 17:40:43 [main] INFO  page.methods.TextBoxActions - Clicking Basic Text Box section...
+2025-11-06 17:40:43 [main] INFO  page.methods.TextBoxActions - Switched to practice form Iframe.
+2025-11-06 17:40:43 [main] INFO  page.methods.TextBoxActions - Entering 'Nitin' in placeholder input...
+2025-11-06 17:40:53 [main] ERROR page.methods.TextBoxActions - Failed to enter text in placeholder field: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at PageDispatcher._dispose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/dispatchers/dispatcher.js:109:30)
+    at Page.<anonymous> (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/dispatchers/pageDispatcher.js:71:12)
+    at Page.emit (node:events:518:28)
+    at Page._didClose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/page.js:172:10)
+    at CRPage.didClose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/chromium/crPage.js:135:16)
+    at CRBrowser._onDetachedFromTarget (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/chromium/crBrowser.js:183:14)
+    at CRSession.emit (node:events:518:28)
+    at /private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/chromium/crConnection.js:138:14
+}
+Call log:
+-   - waiting for locator("input[placeholder='Type something...']")
+
+2025-11-06 17:40:53 [main] ERROR page.steps.Hooks - Error capturing screenshot: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/dispatchers/dispatcher.js:260:69)
+    at transport.onmessage (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/cli/driver.js:53:59)
+    at Immediate._onImmediate (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/utils/pipeTransport.js:76:16)
+    at process.processImmediate (node:internal/timers:485:21)
+}
+2025-11-06 17:40:53 [main] INFO  page.steps.Hooks - Browser closed successfully.

@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Hooks {
@@ -17,57 +18,32 @@ public class Hooks {
     public static Browser browser;
     public static BrowserContext context;
     public static Page page;
-    public static String browserName;
 
     private static final Logger logger = LoggerFactory.getLogger(Hooks.class);
 
     @Before
     public void setup(Scenario scenario) {
         try {
-            String browserFromProperty = System.getProperty("browser");
-
-            String browserFromTag = scenario.getSourceTagNames().stream()
-                    .filter(tag -> tag.matches("@(chrome|firefox|edge|webkit|chromium)"))
-                    .map(tag -> tag.replace("@", ""))
-                    .findFirst()
-                    .orElse(null);
-
-            if (browserFromProperty != null && !browserFromProperty.isEmpty()) {
-                browserName = browserFromProperty;
-            } else if (browserFromTag != null) {
-                browserName = browserFromTag;
-            } else {
-                browserName = "chromium";
-            }
-
-            logger.info("Launching Playwright browser: {}", browserName);
+            logger.info("Launching Chromium browser...");
 
             playwright = Playwright.create();
-
-            BrowserType browserType =
-                    switch (browserName.toLowerCase()) {
-                        case "firefox" -> playwright.firefox();
-                        case "edge" -> playwright.chromium(); // Edge = Chromium
-                        case "webkit" -> playwright.webkit();
-                        default -> playwright.chromium();
-                    };
-
-            browser = browserType.launch(new BrowserType.LaunchOptions().setHeadless(false));
-
-            // ✅ Maximize window (Playwright way)
+            browser = playwright.chromium().launch(
+                    new BrowserType.LaunchOptions()
+                            .setHeadless(false)
+                            .setArgs(Arrays.asList(new String[]{"--start-maximized"}))
+                    // ✅ Force maximize
+            );
+            // ✅ Maximize window
             context = browser.newContext(new Browser.NewContextOptions()
-                    .setViewportSize(null)  // This forces full screen (maximized)
+                    .setViewportSize(null) // full screen automatically
             );
 
             page = context.newPage();
-
-            // ✅ Clear cookies to ensure fresh session
             context.clearCookies();
 
-            logger.info("{} browser launched, maximized, and cookies cleared.", browserName);
-
+            logger.info("Chromium launched & maximized.");
         } catch (Exception e) {
-            logger.error("Exception during Playwright setup: {}", e.getMessage(), e);
+            logger.error("Exception during setup: {}", e.getMessage(), e);
         }
     }
 
@@ -80,7 +56,7 @@ public class Hooks {
                 logger.info("Scenario '{}' passed.", scenario.getName());
             }
         } catch (Exception e) {
-            logger.error("Exception during teardown: {}", e.getMessage(), e);
+            logger.error("Error during teardown: {}", e.getMessage());
         } finally {
             cleanUp();
         }
@@ -91,17 +67,15 @@ public class Hooks {
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
             String screenshotName = scenario.getName().replaceAll(" ", "_") + "_" + timestamp + ".png";
 
-            String screenshotPath = System.getProperty("user.dir") +
-                    "/ScreenShots/" + screenshotName;
+            String screenshotPath = System.getProperty("user.dir") + "/ScreenShots/" + screenshotName;
 
             page.screenshot(new Page.ScreenshotOptions()
                     .setPath(Paths.get(screenshotPath))
                     .setFullPage(true));
 
-            byte[] screenshotBytes = page.screenshot();
-            scenario.attach(screenshotBytes, "image/png", screenshotName);
+            scenario.attach(page.screenshot(), "image/png", screenshotName);
 
-            logger.error("Scenario '{}' failed. Screenshot saved at: {}", scenario.getName(), screenshotPath);
+            logger.error("Scenario failed. Screenshot saved at: {}", screenshotPath);
 
         } catch (Exception e) {
             logger.error("Error capturing screenshot: {}", e.getMessage());
@@ -110,21 +84,11 @@ public class Hooks {
 
     private void cleanUp() {
         try {
-            if (context != null) {
-                context.close();
-                logger.info("Browser context closed.");
-            }
+            if (context != null) context.close();
+            if (browser != null) browser.close();
+            if (playwright != null) playwright.close();
 
-            if (browser != null) {
-                browser.close();
-                logger.info("Browser instance closed.");
-            }
-
-            if (playwright != null) {
-                playwright.close();
-                logger.info("Playwright closed.");
-            }
-
+            logger.info("Browser closed successfully.");
         } catch (Exception e) {
             logger.error("Error during cleanup: {}", e.getMessage());
         }

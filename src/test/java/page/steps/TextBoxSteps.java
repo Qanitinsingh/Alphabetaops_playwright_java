@@ -39,6 +39,11 @@ public class TextBoxSteps {
     public void i_click_on_basic_text_box_section() {
         TextBoxActions.clickBasicTextBox(page);
     }
+    @And("Switch to the practice form iframe")
+    public void swicth_to_iframee() {
+        TextBoxActions.switchToPracticeFormIframe(page);
+    }
+
 
     @And("I enter {string} into the Text with Placeholder field")
     public void i_enter_into_the_text_with_placeholder_field(String string) {

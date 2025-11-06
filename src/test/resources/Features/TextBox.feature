@@ -9,8 +9,9 @@ Feature: Fill and submit AlphaBetaOps form
     When I click on Novice option under left menu
     And I click on Text Box link
     And I click on Basic Text Box section
-    And I enter "Type something..." into the Text with Placeholder field
-    And I enter "Sample preloaded edit" into the Pre-filled Input field
+    And Switch to the practice form iframe
+    And I enter "Nitin" into the Text with Placeholder field
+    And I enter "Sample" into the Pre-filled Input field
     And I enter "Required value" into the Required Field
     And I verify the Read-only Input contains "Read-only content"
     And I enter "Clear me updated" into the Resettable Input field

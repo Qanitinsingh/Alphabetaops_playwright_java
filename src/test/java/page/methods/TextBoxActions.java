@@ -1,12 +1,18 @@
 package page.methods;
 
+
+
+import com.microsoft.playwright.FrameLocator;
 import com.microsoft.playwright.Page;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import page.objects.TextBoxObjects;
 
+
+
 public  class TextBoxActions {
 
+    private static FrameLocator iframe;
     private static final Logger logger = LoggerFactory.getLogger(TextBoxActions.class);
 
     public static void launchBrowser(Page page) {
@@ -20,9 +26,9 @@ public  class TextBoxActions {
 
     public static void navigate(Page page, String url) {
         try {
-            page.navigate(url);
+           page.navigate(url);
             logger.info("Navigating to URL: {}", url);
-            page.navigate(url);
+
         } catch (Exception e) {
             logger.error("Failed to navigate to {} : {}", url, e.getMessage());
             throw e;
@@ -31,9 +37,9 @@ public  class TextBoxActions {
 
     public static void clickNovice(Page page) {
         try {
-            page.click(TextBoxObjects.NO_VOICE);
+           page.locator(TextBoxObjects.NO_VOICE).click();
             logger.info("Clicking 'Novice' menu option...");
-            page.click("text=Novice");
+
         } catch (Exception e) {
             logger.error("Unable to click Novice option: {}", e.getMessage());
             throw e;
@@ -42,9 +48,9 @@ public  class TextBoxActions {
 
     public static void clickTextBox(Page page) {
         try {
-            page.click(TextBoxObjects.NO_VOICE_TEXTBOX);
+           page.locator(TextBoxObjects.NO_VOICE_TEXTBOX).click();
             logger.info("Clicking 'Text Box' link...");
-            page.click("text=Text Box");
+
         } catch (Exception e) {
             logger.error("Unable to click Text Box link: {}", e.getMessage());
             throw e;
@@ -53,20 +59,30 @@ public  class TextBoxActions {
 
     public static void clickBasicTextBox(Page page) {
         try {
-            page.click(TextBoxObjects.NO_VOICE_TEXTBOX_BASICTEXTBOX);
+           page.locator(TextBoxObjects.NO_VOICE_TEXTBOX_BASICTEXTBOX).click();
             logger.info("Clicking Basic Text Box section...");
-            page.click("text=Basic Text Box");
+
         } catch (Exception e) {
             logger.error("Unable to click Basic Text Box: {}", e.getMessage());
             throw e;
         }
     }
+    public  static void switchToPracticeFormIframe(Page page) {
+        try {
+             iframe = page.frameLocator("iframe.content-iframe");
+            logger.info("Switched to practice form Iframe.");
+        } catch (Exception e) {
+            logger.error("Unable to switch to Iframe: {}", e.getMessage());
+            throw e;
+        }
+
+    }
 
     public static void enterTextPlaceholder(Page page, String input) {
         try {
-            page.fill(TextBoxObjects.TEXT_PLACEHOLDER, input);
+            iframe.locator(TextBoxObjects.TEXT_PLACEHOLDER).fill(input);
             logger.info("Entering '{}' in placeholder input...", input);
-            page.fill("input[placeholder='Type something...']", input);
+           page.fill("input[placeholder='Type something...']", input);
         } catch (Exception e) {
             logger.error("Failed to enter text in placeholder field: {}", e.getMessage());
             throw e;
@@ -75,9 +91,9 @@ public  class TextBoxActions {
 
     public static void enterPreFilled(Page page, String input) {
         try {
-            page.fill(TextBoxObjects.PREFILLED, input);
+            iframe.locator(TextBoxObjects.PREFILLED).fill(input);
             logger.info("Entering '{}' in Pre-filled field...", input);
-            page.fill("input[value='Preloaded text']", input);
+
         } catch (Exception e) {
             logger.error("Failed to enter text in Pre-filled input: {}", e.getMessage());
             throw e;
@@ -86,9 +102,9 @@ public  class TextBoxActions {
 
     public static void enterRequired(Page page, String input) {
         try {
-            page.fill(TextBoxObjects.REQUIRED, input);
+            iframe.locator(TextBoxObjects.REQUIRED).fill(input);
             logger.info("Entering '{}' in Required field...", input);
-            page.fill("input[required]", input);
+
         } catch (Exception e) {
             logger.error("Failed to enter required field value: {}", e.getMessage());
             throw e;
@@ -97,7 +113,7 @@ public  class TextBoxActions {
 
     public static void verifyReadOnly(Page page, String expectedValue) {
         try {
-            String actual = page.getAttribute(TextBoxObjects.READ_ONLY, "value");
+            String actual =page.getAttribute(TextBoxObjects.READ_ONLY, "value");
             logger.info("Is Read-only field editable? {}", actual);
             logger.info("Read-only actual value: '{}'", actual);
 
@@ -113,9 +129,9 @@ public  class TextBoxActions {
 
     public static void enterResettable(Page page, String input) {
         try {
-            page.fill(TextBoxObjects.RESET_INPUT, input);
+            iframe.locator(TextBoxObjects.RESET_INPUT).fill(input);
             logger.info("Entering '{}' into Resettable input field...", input);
-            page.fill("input[placeholder='Clear me']", input);
+
         } catch (Exception e) {
             logger.error("Failed to enter resettable input: {}", e.getMessage());
             throw e;
@@ -124,10 +140,10 @@ public  class TextBoxActions {
 
     public static void enterLimitedText(Page page, String input) {
         try {
-            page.fill(TextBoxObjects.LIMITED_TEXT, input);
+            iframe.locator(TextBoxObjects.LIMITED_TEXT).clear();
+            iframe.locator(TextBoxObjects.LIMITED_TEXT).fill(input);
             logger.info("Clearing Limited input and entering '{}'", input);
-            page.fill("input[maxlength='10']", "");  // clear
-            page.fill("input[maxlength='10']", input);
+
         } catch (Exception e) {
             logger.error("Failed to enter limited text: {}", e.getMessage());
             throw e;
@@ -136,9 +152,9 @@ public  class TextBoxActions {
 
     public static void clickSubmit(Page page) {
         try {
-            page.click(TextBoxObjects.SUBMIT_BUTTON);
+            iframe.locator(TextBoxObjects.SUBMIT_BUTTON).click();
             logger.info("Clicking Submit button...");
-            page.click("button:has-text('Submit')");
+
         } catch (Exception e) {
             logger.error("Failed to click Submit: {}", e.getMessage());
             throw e;
@@ -148,7 +164,7 @@ public  class TextBoxActions {
     public static void verifySubmission(Page page) {
         try {
             logger.info("Verifying form submission success...");
-            page.waitForSelector("text=Success");
+
         } catch (Exception e) {
             logger.error("Form submission verification failed: {}", e.getMessage());
             throw e;

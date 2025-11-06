@@ -1,14 +1,10 @@
 package page.methods;
 
-
-
 import com.microsoft.playwright.FrameLocator;
 import com.microsoft.playwright.Page;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import page.objects.TextBoxObjects;
-
-
 
 public  class TextBoxActions {
 
@@ -82,7 +78,7 @@ public  class TextBoxActions {
         try {
             iframe.locator(TextBoxObjects.TEXT_PLACEHOLDER).fill(input);
             logger.info("Entering '{}' in placeholder input...", input);
-           page.fill("input[placeholder='Type something...']", input);
+
         } catch (Exception e) {
             logger.error("Failed to enter text in placeholder field: {}", e.getMessage());
             throw e;
@@ -91,6 +87,7 @@ public  class TextBoxActions {
 
     public static void enterPreFilled(Page page, String input) {
         try {
+            iframe.locator(TextBoxObjects.PREFILLED).clear();
             iframe.locator(TextBoxObjects.PREFILLED).fill(input);
             logger.info("Entering '{}' in Pre-filled field...", input);
 
@@ -113,8 +110,7 @@ public  class TextBoxActions {
 
     public static void verifyReadOnly(Page page, String expectedValue) {
         try {
-            String actual =page.getAttribute(TextBoxObjects.READ_ONLY, "value");
-            logger.info("Is Read-only field editable? {}", actual);
+            String actual = iframe.locator(TextBoxObjects.READ_ONLY).getAttribute("value");
             logger.info("Read-only actual value: '{}'", actual);
 
             if (!expectedValue.equals(actual)) {
@@ -127,8 +123,10 @@ public  class TextBoxActions {
         }
     }
 
+
     public static void enterResettable(Page page, String input) {
         try {
+            iframe.locator(TextBoxObjects.RESET_INPUT).clear();
             iframe.locator(TextBoxObjects.RESET_INPUT).fill(input);
             logger.info("Entering '{}' into Resettable input field...", input);
 

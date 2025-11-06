@@ -8,7 +8,7 @@ public class TextBoxObjects {
 
   // Form Elements inside iframe
     public static final String TEXT_PLACEHOLDER = "#plain-text";
-    public static final String PREFILLED = "#prefilled-text";
+    public static final String PREFILLED = "input#prefilled-text";
     public static final String REQUIRED = "#prefilled-text";
     public static final String READ_ONLY = "#readonly-text";
     public static final String RESET_INPUT = "#resettable-text";

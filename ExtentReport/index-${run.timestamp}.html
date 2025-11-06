@@ -19,9 +19,9 @@
         <span class="ms-3 fs-6">PlayWright Test Project</span>
       </div>
       <div>
-        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 13s</span>
-        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1 text-success"></i> 2025-11-06 05:40:39 pm</span>
-        <span class="badge badge-outline text-lg me-3"><i class="bi bi-clock me-1 text-danger"></i> 2025-11-06 05:40:53 pm</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 28s</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1 text-success"></i> 2025-11-06 05:56:44 pm</span>
+        <span class="badge badge-outline text-lg me-3"><i class="bi bi-clock me-1 text-danger"></i> 2025-11-06 05:57:12 pm</span>
           <button role="button" id="sys-info" class="btn btn-outline-primary smaller" title="View System Info">
             <i class="bi bi-pc-display-horizontal"></i></button>
         <button role="button" id="shortcuts" class="btn btn-outline-primary smaller" title="Shortcuts">
@@ -46,8 +46,8 @@
                 </div>
               </div>
               <div class="card-footer small">
-                <span id="sp1">0</span> Passed,
-                <span id="sf1">1</span> Failed,
+                <span id="sp1">1</span> Passed,
+                <span id="sf1">0</span> Failed,
                 <span id="ss1">0</span> Skipped
               </div>
             </div>
@@ -63,8 +63,8 @@
                 </div>
               </div>
               <div class="card-footer small">
-                <span id="sp2">0</span> Passed,
-                <span id="sf2">1</span> Failed,
+                <span id="sp2">1</span> Passed,
+                <span id="sf2">0</span> Failed,
                 <span id="ss2">0</span> Skipped
               </div>
             </div>
@@ -80,9 +80,9 @@
                   </div>
                 </div>
                 <div class="card-footer small">
-                  <span id="sp3">6</span> Passed,
-                  <span id="sf3">1</span> Failed,
-                  <span id="ss3">7</span> Skipped
+                  <span id="sp3">14</span> Passed,
+                  <span id="sf3">0</span> Failed,
+                  <span id="ss3">0</span> Skipped
                 </div>
               </div>
             </div>
@@ -112,8 +112,8 @@
                   <tr>
                     <td><a href="#" class="secondary tag">@SmokeTest</a></td>
                     <td>1</td>
-                    <td>0</td>
                     <td>1</td>
+                    <td>0</td>
                     <td>1ms</td>
                   </tr>
               </tbody>
@@ -138,17 +138,17 @@
         </div>
       </div>
     </div>
-      <div class="test-container failed">
+      <div class="test-container passed">
         <div class="container">
           <div class="row">
             <div class="col-4">
-              <h6 class="mb-3 testname fs-6 failed">Feature: Fill and submit AlphaBetaOps form</h6>
+              <h6 class="mb-3 testname fs-6 passed">Feature: Fill and submit AlphaBetaOps form</h6>
               <div class="small">
                 <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 1ms</span>
                 <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
-                  2025-11-06 05:40:53 pm</span>
+                  2025-11-06 05:57:12 pm</span>
                 <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
-                  2025-11-06 05:40:53 pm</span>
+                  2025-11-06 05:57:12 pm</span>
               </div>
                 <div class="my-2">
                     <span class="badge rounded-pill text-bg-secondary">@SmokeTest</span>
@@ -156,11 +156,11 @@
               
             </div>
             <div class="col-8">
-                <div class="card mb-3 result failed">
+                <div class="card mb-3 result passed">
                   <div class="card-body">
                     <div class="d-flex justify-content-between">
                       <div>
-                          <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+                          <i class="bi bi-check-circle-fill text-success"></i>
                         <span class="fs-6 ms-2">Scenario: Fill the form and submit</span>
                       </div>
                       <div>
@@ -198,82 +198,35 @@
           <span class="ms-2">And Switch to the practice form iframe</span>
         </div>
         <div class="mt-1 pb-1">
-              <i class="bi bi-exclamation-octagon-fill text-danger"></i>
+            <i class="bi bi-check-circle-fill text-success"></i>
           <span class="ms-2">And I enter "Nitin" into the Text with Placeholder field</span>
-            <pre class="py-2 mt-2">com.microsoft.playwright.impl.TargetClosedError: Error {
-  message='Target page, context or browser has been closed
-  name='TargetClosedError
-  stack='TargetClosedError: Target page, context or browser has been closed
-    at PageDispatcher._dispose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/dispatchers/dispatcher.js:109:30)
-    at Page.<anonymous> (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/dispatchers/pageDispatcher.js:71:12)
-    at Page.emit (node:events:518:28)
-    at Page._didClose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/page.js:172:10)
-    at CRPage.didClose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/chromium/crPage.js:135:16)
-    at CRBrowser._onDetachedFromTarget (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/chromium/crBrowser.js:183:14)
-    at CRSession.emit (node:events:518:28)
-    at /private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/chromium/crConnection.js:138:14
-}
-Call log:
--   - waiting for locator("input[placeholder='Type something...']")
-
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
-	at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:300)
-	at com.microsoft.playwright.impl.PageImpl.fill(PageImpl.java:755)
-	at com.microsoft.playwright.Page.fill(Page.java:4732)
-	at page.methods.TextBoxActions.enterTextPlaceholder(TextBoxActions.java:85)
-	at page.steps.TextBoxSteps.i_enter_into_the_text_with_placeholder_field(TextBoxSteps.java:50)
-	at ✽.I enter "Nitin" into the Text with Placeholder field(file:///Users/nitinkumar/IdeaProjects/playwright-alphabetaops/src/test/resources/Features/TextBox.feature:13)
-Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
-  message='Target page, context or browser has been closed
-  name='TargetClosedError
-  stack='TargetClosedError: Target page, context or browser has been closed
-    at PageDispatcher._dispose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/dispatchers/dispatcher.js:109:30)
-    at Page.<anonymous> (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/dispatchers/pageDispatcher.js:71:12)
-    at Page.emit (node:events:518:28)
-    at Page._didClose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/page.js:172:10)
-    at CRPage.didClose (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/chromium/crPage.js:135:16)
-    at CRBrowser._onDetachedFromTarget (/private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/chromium/crBrowser.js:183:14)
-    at CRSession.emit (node:events:518:28)
-    at /private/var/folders/c8/qlm2ffxx6x3fjqbrfg1wp77r0000gn/T/playwright-java-18291866891984891437/package/lib/server/chromium/crConnection.js:138:14
-}
-Call log:
--   - waiting for locator("input[placeholder='Type something...']")
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:259)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
-	... 8 more
-</pre>
         </div>
         <div class="mt-1 pb-1">
-              <i class="bi bi-exclamation-octagon-fill text-info"></i>
+            <i class="bi bi-check-circle-fill text-success"></i>
           <span class="ms-2">And I enter "Sample" into the Pre-filled Input field</span>
         </div>
         <div class="mt-1 pb-1">
-              <i class="bi bi-exclamation-octagon-fill text-info"></i>
+            <i class="bi bi-check-circle-fill text-success"></i>
           <span class="ms-2">And I enter "Required value" into the Required Field</span>
         </div>
         <div class="mt-1 pb-1">
-              <i class="bi bi-exclamation-octagon-fill text-info"></i>
+            <i class="bi bi-check-circle-fill text-success"></i>
           <span class="ms-2">And I verify the Read-only Input contains "Read-only content"</span>
         </div>
         <div class="mt-1 pb-1">
-              <i class="bi bi-exclamation-octagon-fill text-info"></i>
+            <i class="bi bi-check-circle-fill text-success"></i>
           <span class="ms-2">And I enter "Clear me updated" into the Resettable Input field</span>
         </div>
         <div class="mt-1 pb-1">
-              <i class="bi bi-exclamation-octagon-fill text-info"></i>
+            <i class="bi bi-check-circle-fill text-success"></i>
           <span class="ms-2">And I clear and enter "Limit10" into Limited Input field</span>
         </div>
         <div class="mt-1 pb-1">
-              <i class="bi bi-exclamation-octagon-fill text-info"></i>
+            <i class="bi bi-check-circle-fill text-success"></i>
           <span class="ms-2">And I click on Submit button</span>
         </div>
         <div class="mt-1 pb-1">
-              <i class="bi bi-exclamation-octagon-fill text-info"></i>
+            <i class="bi bi-check-circle-fill text-success"></i>
           <span class="ms-2">Then I should see the form submitted successfully</span>
         </div>
   </div>
@@ -287,23 +240,23 @@ Call log:
   </div>
 
   <script>
-    const stats1Annotation = {'total': 1, 'passed': 0};
+    const stats1Annotation = {'total': 1, 'passed': 1};
     const stats1 = [
-      { result: 'Passed', count: 0, bg: 'rgb(140, 197, 83)' },
-      { result: 'Failed', count: 1, bg: 'rgb(233,80,113)' },
+      { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
+      { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
       { result: 'Skipped', count: 0, bg: 'rgb(13, 202, 240)' }
     ];
-      const stats2Annotation = {'total': 1, 'passed': 0};
+      const stats2Annotation = {'total': 1, 'passed': 1};
       const stats2 = [
-        { result: 'Passed', count: 0, bg: 'rgb(140, 197, 83)' },
-        { result: 'Failed', count: 1, bg: 'rgb(233,80,113)' },
+        { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
         { result: 'Skipped', count: 0, bg: 'rgb(13, 202, 240)' }
       ];
-      const stats3Annotation = {'total': 14, 'passed': 6};
+      const stats3Annotation = {'total': 14, 'passed': 14};
       const stats3 = [
-        { result: 'Passed', count: 6, bg: 'rgb(140, 197, 83)' },
-        { result: 'Failed', count: 1, bg: 'rgb(233,80,113)' },
-        { result: 'Skipped', count: 7, bg: 'rgb(13, 202, 240)' }
+        { result: 'Passed', count: 14, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
+        { result: 'Skipped', count: 0, bg: 'rgb(13, 202, 240)' }
       ];
      
   </script>
@@ -383,12 +336,12 @@ Call log:
                   <td>Toggle skipped tests</td>
                 </tr>
                 <tr>
-                  <td>esc</td>
-                  <td>Reset all filters</td>
-                </tr>
-                <tr>
                   <td>L</td>
                   <td>Toggle theme (light/dark)</td>
+                </tr>
+                <tr>
+                  <td>esc</td>
+                  <td>Reset all filters</td>
                 </tr>
                 <tr>
                   <td>f</td>

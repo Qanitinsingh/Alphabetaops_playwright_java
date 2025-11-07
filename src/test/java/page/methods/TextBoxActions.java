@@ -56,6 +56,7 @@ public  class TextBoxActions {
     public static void clickBasicTextBox(Page page) {
         try {
            page.locator(TextBoxObjects.NO_VOICE_TEXTBOX_BASICTEXTBOX).click();
+           //driver.findElement(By.cssSelector(".list-group-item")).click();
             logger.info("Clicking Basic Text Box section...");
 
         } catch (Exception e) {
